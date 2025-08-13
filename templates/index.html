@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">☕ Cafe & Wifi Finder</h1>
+        <p class="lead">Find the perfect cafe with great coffee, reliable wifi, and power outlets for your work or study sessions.</p>
+        <hr class="my-4" style="border-color: #fff;">
+        <p>Discover cafes rated by the community or add your own favorite spots!</p>
+        <div class="mt-4">
+            <a class="btn btn-warning btn-lg me-3" href="{{ url_for('cafes') }}" role="button">View All Cafes</a>
+            <a class="btn btn-outline-light btn-lg" href="{{ url_for('add_cafe') }}" role="button">Add a Cafe</a>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="text-center">
+            <h3>☕ Coffee Quality</h3>
+            <p>Rate the coffee from 1-5 cups based on taste, variety, and preparation quality.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="text-center">
+            <h3>💪 Wifi Strength</h3>
+            <p>Rate the internet connection reliability and speed for your work needs.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="text-center">
+            <h3>🔌 Power Access</h3>
+            <p>Rate the availability and accessibility of power outlets throughout the cafe.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

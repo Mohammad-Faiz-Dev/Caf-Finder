@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <div class="p-4 rounded" style="background-color: black; color: white;">
+        <h2 class="mb-4">Add a Cafe</h2>
+        <form method="POST" action="{{ url_for('add_cafe') }}">
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+                {{ form.cafe.label(class="form-label") }}
+                {{ form.cafe(class="form-control", placeholder="Cafe name") }}
+            </div>
+            <div class="mb-3">
+                {{ form.location.label(class="form-label") }}
+                {{ form.location(class="form-control", placeholder="Location URL") }}
+            </div>
+            <div class="mb-3">
+                {{ form.open_time.label(class="form-label") }}
+                {{ form.open_time(class="form-control", placeholder="Opening Time") }}
+            </div>
+            <div class="mb-3">
+                {{ form.close_time.label(class="form-label") }}
+                {{ form.close_time(class="form-control", placeholder="Closing Time") }}
+            </div>
+            <div class="mb-3">
+                {{ form.coffee_rating.label(class="form-label") }}
+                {{ form.coffee_rating(class="form-select") }}
+            </div>
+            <div class="mb-3">
+                {{ form.wifi_rating.label(class="form-label") }}
+                {{ form.wifi_rating(class="form-select") }}
+            </div>
+            <div class="mb-3">
+                {{ form.power_rating.label(class="form-label") }}
+                {{ form.power_rating(class="form-select") }}
+            </div>
+            {{ form.submit(class="btn btn-warning text-white") }}
+        </form>
+    </div>
+</div>
+{% endblock %}
